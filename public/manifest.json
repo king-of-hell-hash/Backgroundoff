@@ -1,0 +1,239 @@
+{
+  "id": "/index.html",
+  "name": "BackgroundOff — AI Background Remover",
+  "short_name": "BackgroundOff",
+  "description": "Instant, automatic 100% free client-side AI image background remover and editor with multi-format export.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": [
+    "window-controls-overlay",
+    "tabbed",
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "theme_color": "#4f46e5",
+  "background_color": "#ffffff",
+  "categories": [
+    "photo",
+    "photography",
+    "utilities",
+    "productivity",
+    "graphics"
+  ],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "/icons/icon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-384x384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Remove Background",
+      "short_name": "Remove Bg",
+      "description": "Upload or drop an image to remove background immediately",
+      "url": "/?action=upload",
+      "icons": [
+        {
+          "src": "/icons/shortcut-upload.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Try Sample Image",
+      "short_name": "Samples",
+      "description": "Test instant cutout on sample portrait, product, and car photos",
+      "url": "/?action=sample",
+      "icons": [
+        {
+          "src": "/icons/shortcut-sample.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Open Editor",
+      "short_name": "Editor",
+      "description": "Open BackgroundOff Studio and custom canvas backdrops",
+      "url": "/?action=editor",
+      "icons": [
+        {
+          "src": "/icons/shortcut-editor.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/?action=file-handler",
+      "name": "Image Files",
+      "accept": {
+        "image/png": [".png"],
+        "image/jpeg": [".jpg", ".jpeg"],
+        "image/webp": [".webp"],
+        "image/avif": [".avif"],
+        "image/gif": [".gif"]
+      },
+      "launch_type": "single-client"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "protocol_handlers": [
+    {
+      "protocol": "web+backgroundoff",
+      "url": "/?url=%s"
+    }
+  ],
+  "share_target": {
+    "action": "/?action=share-target",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "image",
+          "accept": [
+            "image/*",
+            ".png",
+            ".jpg",
+            ".jpeg",
+            ".webp",
+            ".avif"
+          ]
+        }
+      ]
+    }
+  },
+  "widgets": [
+    {
+      "name": "Quick Remove Background",
+      "short_name": "BgRemover",
+      "description": "Quickly remove photo backgrounds in 1 click",
+      "tag": "quick-remove",
+      "template": "widget-template",
+      "ms_ac_template": "/widgets/widget-template.json",
+      "data": "/widgets/widget-data.json",
+      "type": "application/json",
+      "screenshots": [
+        {
+          "src": "/screenshots/widget-screenshot.png",
+          "sizes": "600x400",
+          "label": "Quick Background Remover Widget"
+        }
+      ],
+      "icons": [
+        {
+          "src": "/icons/icon-192x192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "tab_strip": {
+    "home_tab": {
+      "scope_patterns": ["/"]
+    },
+    "new_tab_button": {
+      "url": "/?new_tab=1"
+    }
+  },
+  "note_taking": {
+    "new_note_url": "/?note=1"
+  },
+  "screenshots": [
+    {
+      "src": "/screenshots/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "BackgroundOff Desktop Studio"
+    },
+    {
+      "src": "/screenshots/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "BackgroundOff Mobile Editor"
+    }
+  ]
+}

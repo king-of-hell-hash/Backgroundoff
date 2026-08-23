@@ -1,0 +1,10 @@
+{
+  "name": "BackgroundOff",
+  "description": "Instant, 100% automatic client-side background removal tool with live before/after slider, AI-generated backdrops, in-app AI assistant, and multi-format exports.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
